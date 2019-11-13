@@ -1,0 +1,18 @@
+# Configuration file for the parser. In addition to parser_config.txt, this
+# file maintains semantics information regarding the productions of the
+# grammar, and has to be kept in sync all the time with parser_config.txt. For
+# example, we need to distinguish between binary and unary operators. We also
+# might need to ommit certain symbols during the creation of the AST, as for
+# example the parentheses.
+
+# Each line is of the form
+#
+#     <type> : <command>
+#
+# where type is the type of the semantic information in the line. Right now the
+# only supported types are 0 - unary left operator (by default all operators
+# are binary), and 1 - unused terminal
+
+0 12 0
+1 (
+1 )

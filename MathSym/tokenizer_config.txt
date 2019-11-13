@@ -1,0 +1,16 @@
+# Configuration file for the lexical analyzer. Each line is of the form:
+#
+#     <type> : <regex>
+#
+# where <type> is the token category and <regex> is the regular expression that
+# will match it.
+  
++ : \+
+- : -
+* : \*
+/ : /
+( : \(
+) : \)
+= : =
+number : [0-9]+(\.[0-9]+)?
+x : x

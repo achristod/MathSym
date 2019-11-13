@@ -1,0 +1,28 @@
+# Configuration file for the parser. Specifies the CFG grammar that is used to
+# parse each command. The application is based on LL(1) grammar, so it is
+# necessary to keep the productions right-recursive and backtrack-free. Each
+# line specifies a production, and is of the form
+#
+#     A -> b1 b2 ... bn
+#
+# where A is a nonterminal symbol and each bi is either a terminal or a
+# nonterminal symbol. By convention, the start symbol is the left-hand-side
+# symbol in the first production. The special epsilon symbol for the empty
+# string is denoted by ^e$.
+
+S  -> E RE
+RE -> ^e$
+RE -> = E
+E  -> T E'
+E' -> + T E'
+E' -> - T E'
+E' -> ^e$
+T  -> V T'
+T' -> * F T'
+T' -> / F T'
+T' -> ^e$
+V  -> F
+V  -> - F
+F  -> ( E )
+F  -> number
+F  -> x
