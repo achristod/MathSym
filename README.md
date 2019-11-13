@@ -54,7 +54,7 @@ equation based on whether the = operator is present or not in the command.
 ## Design
 
 The application consists of three main parts that evaluate a command: a
-tokenizer (or lexical analyzer), a parser, and a semantics analyzer. The
+*tokenizer* (or lexical analyzer), a *parser*, and a *semantics analyzer*. The
 tokenizer is implemented in the Tokenizer class, while the parser and the
 semantics analyzer are both implemented in the Parser class. Below is a brief
 description of each component.
